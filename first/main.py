@@ -1,4 +1,4 @@
 input()
-print('Helloghh tWorld')
-print('OOKay')
-qwdqw
+print("Helloghh tWorld")
+print("OOKay")
+print("second")
