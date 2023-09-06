@@ -24,14 +24,14 @@ class Calculator:
         self.button_0 = ttk.Button(self.master, text="0", command=lambda: self.button_click(0))
         self.button_clear = ttk.Button(self.master, text="C", command=self.button_clear)
         self.button_add = ttk.Button(self.master, text="+", command=self.button_add)
-        self.button_equal
-        self.button_subtract
-        self.button_multiply
-        self.button_divide
-        self.button_floor_div
-        self.button_modulus
-        self.button_sqrt
-        self.button_neg
+        self.button_equal = ttk.Button(self.master, text="=", command=self.button_equal)
+        self.button_subtract = ttk.Button(self.master, text="-", command=self.button_subtract)
+        self.button_multiply = ttk.Button(self.master, text="*", command=self.button_multiply)
+        self.button_divide = ttk.Button(self.master, text="/", command=self.button_divide)
+        self.button_floor_div = ttk.Button(self.master, text="//", command=self.button_floor_div)
+        self.button_modulus = ttk.Button(self.master, text="%", command=self.button_modulus)
+        self.button_sqrt = ttk.Button(self.master, text="√", command=self.button_sqrt)
+        self.button_neg = ttk.Button(self.master, text="+/-", command=self.button_neg)
 
         self.button_1
         self.button_2
