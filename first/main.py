@@ -33,29 +33,49 @@ class Calculator:
         self.button_sqrt = ttk.Button(self.master, text="√", command=self.button_sqrt)
         self.button_neg = ttk.Button(self.master, text="+/-", command=self.button_neg)
 
-        self.button_1
-        self.button_2
-        self.button_3
-        self.button_add
-        self.button_floor_div
+        self.button_1.grid(row=1, column=0)
+        self.button_2.grid(row=1, column=1)
+        self.button_3.grid(row=1, column=2)
+        self.button_add.grid(row=1, column=3)
+        self.button_floor_div.grid(row=1, column=4)
 
-        self.button_4
-        self.button_5
-        self.button_6
-        self.button_substract
-        self.button_modulus
+        self.button_4.grid(row=2, column=0)
+        self.button_5.grid(row=2, column=1)
+        self.button_6.grid(row=2, column=2)
+        self.button_substract.grid(row=2, column=3)
+        self.button_modulus.grid(row=2, column=4)
 
-        self.button_7
-        self.button_8
-        self.button_9
-        self.button_multiply
-        self.button_sqrt
+        self.button_7.grid(row=3, column=0)
+        self.button_8.grid(row=3, column=1)
+        self.button_9.grid(row=3, column=2)
+        self.button_multiply.grid(row=3, column=3)
+        self.button_sqrt.grid(row=3, column=4)
 
-        self.button_clear
-        self.button_0
-        self.button_equal
-        self.button_divide
-        self.button_neg
+        self.button_clear.grid(row=4, column=0)
+        self.button_0.grid(row=4, column=1)
+        self.button_equal.grid(row=4, column=2)
+        self.button_divide.grid(row=4, column=3)
+        self.button_neg.grid(row=4, column=4)
 
         self.f_num = 0
         self.math = ""
+
+    def button_click(self, number):
+        current = self.number_entry.get()
+        self.number_entry.delete(0, tk.END)
+        self.number_entry.insert(0, str(current) + str(number))
+
+    def button_clear(self):
+        self.number_entry.delete(0, tk.END)
+
+    def button_add(self):
+        first_number = self.number_entry.get()
+        self.math = "addition"
+        self.f_num = int(first_number)
+        self.number_entry.delete(0, tk.END)
+
+    def button_egual(self):
+        second_number = self.number_entry.get()
+        self.number_entry.delete(0, tk.END)
+
+        if self.math == "addition":
